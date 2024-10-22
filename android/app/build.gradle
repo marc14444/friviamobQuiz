@@ -1,0 +1,27 @@
+android {
+    namespace = "com.example.friviaa"
+    compileSdk = 33  // Remplace par la version SDK cible
+
+    defaultConfig {
+        applicationId = "com.example.friviaa"
+        minSdkVersion 21  // Définis ici manuellement
+        targetSdkVersion 33  // Version SDK cible
+        versionCode 1  // Numéro de version
+        versionName "1.0.0"  // Nom de version
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
